@@ -45,6 +45,12 @@ glib.h
 -
 dbus/dbus-glib-lowlevel.h
 -
+service.h
+/home/mini/OPEL/service/service.h
+iostream
+-
+string
+-
 errno.h
 -
 fcntl.h

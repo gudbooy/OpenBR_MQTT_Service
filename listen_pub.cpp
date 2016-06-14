@@ -21,8 +21,9 @@ Contributors:
 #include <dbus/dbus-glib.h>
 #include <glib.h>
 #include <dbus/dbus-glib-lowlevel.h>
-
-
+#include "service.h"
+#include <iostream>
+#include <string>
 // MQTT
 #include <errno.h>
 #include <fcntl.h>
@@ -46,6 +47,8 @@ Contributors:
 
 /* Global variables for use in callbacks. See sub_client.c for an example of
  * using a struct to hold variables for use in callbacks. */
+const char* anonymous = "anonymous";
+
 static char *topic = NULL;
 static char *message = NULL;
 static long msglen = 0;
@@ -498,17 +501,55 @@ void *publish(void* arg)
 
 static DBusHandlerResult dbus_filter (DBusConnection *connection, DBusMessage *message, void *user_data)
 {
-	const char* temp_argv = "temp";
-
+	DBusMessageIter args;
 	
+	char* imgPath, data;
+  const	char* temp_argv = NULL;
+	std::string tmp;
+
+	ImageProcessing* faceRecognition = new ImageProcessing();
+	faceRecognition->initialize("FaceRecognition");
+	faceRecognition->parseJsonData();
+
 	if(dbus_message_is_signal(message, "org.share.linux", "publish"))
 	{
+		do{
+		dbus_message_iter_get_basic(&args, &imgPath);
+		}while(dbus_message_iter_next(&args));
+		QString imgData(imgPath);
 		// Publish logic
-		printf("received well!\n");
+		std::cout << "Image Path : " << imgData.toStdString() << std::endl;	
+		targetDataSet* matchedItem = faceRecognition->getMatchingItem(imgData);
+		if(matchedItem == NULL)
+		{		
+			std::cout << "Its anonymous !!!" << std::endl;
+			temp_argv= anonymous;			
+			/*anonymous*/
+		}
+		else
+		{
+			std::cout << "Name : " << matchedItem->name.toStdString() << std::endl;
+			tmp += matchedItem->name.toStdString();
+			tmp += " ";
+			tmp += matchedItem->age.toStdString();
+			tmp += " ";
+			tmp += matchedItem->personalInfo.toStdString();
+			temp_argv = tmp.c_str();	
+			std::cout << "matchedItem String : " << temp_argv << std::endl;
+			/*make data set*/
+		}
 		
-		pthread_create(&thread, NULL, &publish, (void*)temp_argv);
+		printf("received well!\n");
 
-
+	
+		pthread_create(&thread, NULL, &publish, (void*)temp_argv);			
+		pthread_join(thread, NULL);
+		
+		delete faceRecognition;
+		
+		
+		
+		return DBUS_HANDLER_RESULT_HANDLED;
 	}
 
 	return DBUS_HANDLER_RESULT_NOT_YET_HANDLED;
