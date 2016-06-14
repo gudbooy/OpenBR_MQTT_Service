@@ -49,62 +49,62 @@ include CMakeFiles/test.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/test.dir/flags.make
 
-CMakeFiles/test.dir/test.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/test.o: ../test.cpp
+CMakeFiles/test.dir/listen_pub.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/listen_pub.o: ../listen_pub.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/mini/OPEL/service/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/test.dir/test.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/test.dir/test.o -c /home/mini/OPEL/service/test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/test.dir/listen_pub.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/test.dir/listen_pub.o -c /home/mini/OPEL/service/listen_pub.cpp
 
-CMakeFiles/test.dir/test.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/test.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mini/OPEL/service/test.cpp > CMakeFiles/test.dir/test.i
+CMakeFiles/test.dir/listen_pub.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/listen_pub.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mini/OPEL/service/listen_pub.cpp > CMakeFiles/test.dir/listen_pub.i
 
-CMakeFiles/test.dir/test.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/test.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mini/OPEL/service/test.cpp -o CMakeFiles/test.dir/test.s
+CMakeFiles/test.dir/listen_pub.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/listen_pub.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mini/OPEL/service/listen_pub.cpp -o CMakeFiles/test.dir/listen_pub.s
 
-CMakeFiles/test.dir/test.o.requires:
-.PHONY : CMakeFiles/test.dir/test.o.requires
+CMakeFiles/test.dir/listen_pub.o.requires:
+.PHONY : CMakeFiles/test.dir/listen_pub.o.requires
 
-CMakeFiles/test.dir/test.o.provides: CMakeFiles/test.dir/test.o.requires
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.o.provides.build
-.PHONY : CMakeFiles/test.dir/test.o.provides
+CMakeFiles/test.dir/listen_pub.o.provides: CMakeFiles/test.dir/listen_pub.o.requires
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/listen_pub.o.provides.build
+.PHONY : CMakeFiles/test.dir/listen_pub.o.provides
 
-CMakeFiles/test.dir/test.o.provides.build: CMakeFiles/test.dir/test.o
+CMakeFiles/test.dir/listen_pub.o.provides.build: CMakeFiles/test.dir/listen_pub.o
 
-CMakeFiles/test.dir/service.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/service.o: ../service.cpp
+CMakeFiles/test.dir/client_shared.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/client_shared.o: ../client_shared.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/mini/OPEL/service/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/test.dir/service.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/test.dir/service.o -c /home/mini/OPEL/service/service.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/test.dir/client_shared.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/test.dir/client_shared.o -c /home/mini/OPEL/service/client_shared.cpp
 
-CMakeFiles/test.dir/service.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/service.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mini/OPEL/service/service.cpp > CMakeFiles/test.dir/service.i
+CMakeFiles/test.dir/client_shared.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/client_shared.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mini/OPEL/service/client_shared.cpp > CMakeFiles/test.dir/client_shared.i
 
-CMakeFiles/test.dir/service.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/service.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mini/OPEL/service/service.cpp -o CMakeFiles/test.dir/service.s
+CMakeFiles/test.dir/client_shared.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/client_shared.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mini/OPEL/service/client_shared.cpp -o CMakeFiles/test.dir/client_shared.s
 
-CMakeFiles/test.dir/service.o.requires:
-.PHONY : CMakeFiles/test.dir/service.o.requires
+CMakeFiles/test.dir/client_shared.o.requires:
+.PHONY : CMakeFiles/test.dir/client_shared.o.requires
 
-CMakeFiles/test.dir/service.o.provides: CMakeFiles/test.dir/service.o.requires
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/service.o.provides.build
-.PHONY : CMakeFiles/test.dir/service.o.provides
+CMakeFiles/test.dir/client_shared.o.provides: CMakeFiles/test.dir/client_shared.o.requires
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/client_shared.o.provides.build
+.PHONY : CMakeFiles/test.dir/client_shared.o.provides
 
-CMakeFiles/test.dir/service.o.provides.build: CMakeFiles/test.dir/service.o
+CMakeFiles/test.dir/client_shared.o.provides.build: CMakeFiles/test.dir/client_shared.o
 
 # Object files for target test
 test_OBJECTS = \
-"CMakeFiles/test.dir/test.o" \
-"CMakeFiles/test.dir/service.o"
+"CMakeFiles/test.dir/listen_pub.o" \
+"CMakeFiles/test.dir/client_shared.o"
 
 # External object files for target test
 test_EXTERNAL_OBJECTS =
 
-test: CMakeFiles/test.dir/test.o
-test: CMakeFiles/test.dir/service.o
+test: CMakeFiles/test.dir/listen_pub.o
+test: CMakeFiles/test.dir/client_shared.o
 test: CMakeFiles/test.dir/build.make
 test: /usr/local/lib/libopencv_ml.so.2.4.11
 test: /usr/local/lib/libopencv_objdetect.so.2.4.11
@@ -126,8 +126,8 @@ test: CMakeFiles/test.dir/link.txt
 CMakeFiles/test.dir/build: test
 .PHONY : CMakeFiles/test.dir/build
 
-CMakeFiles/test.dir/requires: CMakeFiles/test.dir/test.o.requires
-CMakeFiles/test.dir/requires: CMakeFiles/test.dir/service.o.requires
+CMakeFiles/test.dir/requires: CMakeFiles/test.dir/listen_pub.o.requires
+CMakeFiles/test.dir/requires: CMakeFiles/test.dir/client_shared.o.requires
 .PHONY : CMakeFiles/test.dir/requires
 
 CMakeFiles/test.dir/clean:

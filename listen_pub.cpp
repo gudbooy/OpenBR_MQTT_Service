@@ -16,7 +16,6 @@ Contributors:
 
 #include <pthread.h>
 #include <unistd.h>
-#include "service.h"
 // Dbus
 #include <dbus/dbus.h>
 #include <dbus/dbus-glib.h>
@@ -149,7 +148,7 @@ int load_stdin(void)
 
 	while(!feof(stdin)){
 		rlen = fread(buf, 1, 1024, stdin);
-		aux_message = realloc(message, pos+rlen);
+		aux_message = (char*)realloc(message, pos+rlen);
 		if(!aux_message){
 			if(!quiet) fprintf(stderr, "Error: Out of memory.\n");
 			free(message);
@@ -198,7 +197,7 @@ int load_file(const char *filename)
 		return 1;
 	}
 	fseek(fptr, 0, SEEK_SET);
-	message = malloc(msglen);
+	message = (char*)malloc(msglen);
 	if(!message){
 		fclose(fptr);
 		if(!quiet) fprintf(stderr, "Error: Out of memory.\n");
@@ -219,7 +218,7 @@ void print_usage(void)
 
 	mosquitto_lib_version(&major, &minor, &revision);
 	printf("mosquitto_pub is a simple mqtt client that will publish a message on a single topic and exit.\n");
-	printf("mosquitto_pub version %s running on libmosquitto %d.%d.%d.\n\n", VERSION, major, minor, revision);
+//	printf("mosquitto_pub version %s running on libmosquitto %d.%d.%d.\n\n", VERSION, major, minor, revision);
 	printf("Usage: mosquitto_pub [-h host] [-k keepalive] [-p port] [-q qos] [-r] {-f file | -l | -n | -m message} -t topic\n");
 #ifdef WITH_SRV
 	printf("                     [-A bind_address] [-S]\n");
@@ -320,7 +319,7 @@ void *publish(void* arg)
 	argv = (char**) malloc(2*sizeof(char*));
 
 
-	buf = malloc(buf_len);
+	buf = (char*)malloc(buf_len);
 	if(!buf){
 		fprintf(stderr, "Error: Out of memory.\n");
 		//return 1;
@@ -441,7 +440,7 @@ void *publish(void* arg)
 						buf_len += 1024;
 						pos += 1023;
 						read_len = 1024;
-						buf = realloc(buf, buf_len);
+						buf = (char*)realloc(buf, buf_len);
 						if(!buf){
 							fprintf(stderr, "Error: Out of memory.\n");
 							//return 1;
@@ -499,7 +498,7 @@ void *publish(void* arg)
 
 static DBusHandlerResult dbus_filter (DBusConnection *connection, DBusMessage *message, void *user_data)
 {
-	char* temp_argv = "temp";
+	const char* temp_argv = "temp";
 
 	
 	if(dbus_message_is_signal(message, "org.share.linux", "publish"))

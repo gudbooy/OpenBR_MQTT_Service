@@ -20,8 +20,8 @@ link_directories(${OPENBR_DIR}/lib)
 set(OPENBR_LIBS "openbr")
 
 include_directories(./)
-add_executable(test test.cpp service.cpp)
-target_link_libraries(test openbr ${OPENCV_DEPENDENCIES}  ${CMAKE_THREAD_LIBS_INIT})
+add_executable(test listen_pub.cpp client_shared.cpp)
+target_link_libraries(test openbr libmosquitto mosquitto_pub ${OPENCV_DEPENDENCIES}  ${CMAKE_THREAD_LIBS_INIT})
 qt5_use_modules(test ${QT_DEPENDENCIES})
 
-add_definitions(-g)
+add_definitions(-g `pkg-config --libs --cflags dbus-1 glib-2.0 dbus-glib-1`)

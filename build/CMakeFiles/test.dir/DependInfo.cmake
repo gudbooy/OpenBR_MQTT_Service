@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/mini/OPEL/service/service.cpp" "/home/mini/OPEL/service/build/CMakeFiles/test.dir/service.o"
-  "/home/mini/OPEL/service/test.cpp" "/home/mini/OPEL/service/build/CMakeFiles/test.dir/test.o"
+  "/home/mini/OPEL/service/client_shared.cpp" "/home/mini/OPEL/service/build/CMakeFiles/test.dir/client_shared.o"
+  "/home/mini/OPEL/service/listen_pub.cpp" "/home/mini/OPEL/service/build/CMakeFiles/test.dir/listen_pub.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

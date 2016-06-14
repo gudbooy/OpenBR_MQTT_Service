@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/mini/OPEL/service/client_shared.cpp
+/home/mini/OPEL/service/client_shared.c
 errno.h
 -
 fcntl.h
@@ -31,40 +31,6 @@ client_shared.h
 /home/mini/OPEL/service/client_shared.h
 stdio.h
 -
-
-/home/mini/OPEL/service/listen_pub.cpp
-pthread.h
--
-unistd.h
--
-dbus/dbus.h
--
-dbus/dbus-glib.h
--
-glib.h
--
-dbus/dbus-glib-lowlevel.h
--
-errno.h
--
-fcntl.h
--
-stdio.h
--
-stdlib.h
--
-string.h
--
-unistd.h
--
-process.h
--
-winsock2.h
--
-mosquitto.h
--
-client_shared.h
-/home/mini/OPEL/service/client_shared.h
 
 /usr/local/include/mosquitto.h
 stdbool.h

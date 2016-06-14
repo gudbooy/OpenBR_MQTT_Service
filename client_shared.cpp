@@ -202,7 +202,7 @@ int client_config_load(struct mosq_config *cfg, int pub_or_sub, int argc, char *
 	if( pub_or_sub == CLIENT_SUB){
 		// topic
 		cfg->topic_count++;
-		cfg->topics = realloc(cfg->topics, cfg->topic_count * sizeof(char*));
+		cfg->topics = (char**)realloc(cfg->topics, cfg->topic_count * sizeof(char*));
 		cfg->topics[cfg->topic_count-1] = strdup("opel/img");
 
 
@@ -558,7 +558,7 @@ int client_config_line_proc(struct mosq_config *cfg, int pub_or_sub, int argc, c
 						return 1;
 					}
 					cfg->topic_count++;
-					cfg->topics = realloc(cfg->topics, cfg->topic_count*sizeof(char *));
+					cfg->topics = (char**)realloc(cfg->topics, cfg->topic_count*sizeof(char *));
 					cfg->topics[cfg->topic_count-1] = strdup(argv[i+1]);
 				}
 				i++;
@@ -576,7 +576,7 @@ int client_config_line_proc(struct mosq_config *cfg, int pub_or_sub, int argc, c
 					return 1;
 				}
 				cfg->filter_out_count++;
-				cfg->filter_outs = realloc(cfg->filter_outs, cfg->filter_out_count*sizeof(char *));
+				cfg->filter_outs = (char**)realloc(cfg->filter_outs, cfg->filter_out_count*sizeof(char *));
 				cfg->filter_outs[cfg->filter_out_count-1] = strdup(argv[i+1]);
 			}
 			i++;
@@ -736,7 +736,7 @@ int client_id_generate(struct mosq_config *cfg, const char *id_base)
 	char hostname[256];
 
 	if(cfg->id_prefix){
-		cfg->id = malloc(strlen(cfg->id_prefix)+10);
+		cfg->id = (char*)malloc(strlen(cfg->id_prefix)+10);
 		if(!cfg->id){
 			if(!cfg->quiet) fprintf(stderr, "Error: Out of memory.\n");
 			mosquitto_lib_cleanup();
@@ -748,7 +748,7 @@ int client_id_generate(struct mosq_config *cfg, const char *id_base)
 		gethostname(hostname, 256);
 		hostname[255] = '\0';
 		len = strlen(id_base) + strlen("/-") + 6 + strlen(hostname);
-		cfg->id = malloc(len);
+		cfg->id = (char*)malloc(len);
 		if(!cfg->id){
 			if(!cfg->quiet) fprintf(stderr, "Error: Out of memory.\n");
 			mosquitto_lib_cleanup();
