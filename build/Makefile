@@ -144,6 +144,21 @@ listen_pub.s:
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/listen_pub.s
 .PHONY : listen_pub.s
 
+# target to build an object file
+service.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/service.o
+.PHONY : service.o
+
+# target to preprocess a source file
+service.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/service.i
+.PHONY : service.i
+
+# target to generate assembly for a file
+service.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/service.s
+.PHONY : service.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -159,6 +174,9 @@ help:
 	@echo "... listen_pub.o"
 	@echo "... listen_pub.i"
 	@echo "... listen_pub.s"
+	@echo "... service.o"
+	@echo "... service.i"
+	@echo "... service.s"
 .PHONY : help
 
 

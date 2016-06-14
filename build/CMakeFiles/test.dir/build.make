@@ -95,16 +95,41 @@ CMakeFiles/test.dir/client_shared.o.provides: CMakeFiles/test.dir/client_shared.
 
 CMakeFiles/test.dir/client_shared.o.provides.build: CMakeFiles/test.dir/client_shared.o
 
+CMakeFiles/test.dir/service.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/service.o: ../service.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mini/OPEL/service/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/test.dir/service.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/test.dir/service.o -c /home/mini/OPEL/service/service.cpp
+
+CMakeFiles/test.dir/service.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/service.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mini/OPEL/service/service.cpp > CMakeFiles/test.dir/service.i
+
+CMakeFiles/test.dir/service.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/service.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mini/OPEL/service/service.cpp -o CMakeFiles/test.dir/service.s
+
+CMakeFiles/test.dir/service.o.requires:
+.PHONY : CMakeFiles/test.dir/service.o.requires
+
+CMakeFiles/test.dir/service.o.provides: CMakeFiles/test.dir/service.o.requires
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/service.o.provides.build
+.PHONY : CMakeFiles/test.dir/service.o.provides
+
+CMakeFiles/test.dir/service.o.provides.build: CMakeFiles/test.dir/service.o
+
 # Object files for target test
 test_OBJECTS = \
 "CMakeFiles/test.dir/listen_pub.o" \
-"CMakeFiles/test.dir/client_shared.o"
+"CMakeFiles/test.dir/client_shared.o" \
+"CMakeFiles/test.dir/service.o"
 
 # External object files for target test
 test_EXTERNAL_OBJECTS =
 
 test: CMakeFiles/test.dir/listen_pub.o
 test: CMakeFiles/test.dir/client_shared.o
+test: CMakeFiles/test.dir/service.o
 test: CMakeFiles/test.dir/build.make
 test: /usr/local/lib/libopencv_ml.so.2.4.11
 test: /usr/local/lib/libopencv_objdetect.so.2.4.11
@@ -128,6 +153,7 @@ CMakeFiles/test.dir/build: test
 
 CMakeFiles/test.dir/requires: CMakeFiles/test.dir/listen_pub.o.requires
 CMakeFiles/test.dir/requires: CMakeFiles/test.dir/client_shared.o.requires
+CMakeFiles/test.dir/requires: CMakeFiles/test.dir/service.o.requires
 .PHONY : CMakeFiles/test.dir/requires
 
 CMakeFiles/test.dir/clean:
