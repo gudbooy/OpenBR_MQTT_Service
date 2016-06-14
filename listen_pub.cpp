@@ -117,6 +117,7 @@ void my_connect_callback(struct mosquitto *mosq, void *obj, int result)
 void my_disconnect_callback(struct mosquitto *mosq, void *obj, int rc)
 {
 	connected = false;
+	disconnect_sent = false;
 	printf("disconnect callback!\n");
 }
 
@@ -318,10 +319,12 @@ void *publish(void* arg)
 	int pos;
 	int argc = 3;
 	char** argv;
+	
 
 	argv = (char**) malloc(2*sizeof(char*));
+	argv[0] = (char*)arg;
 
-
+  connected = true;
 	buf = (char*)malloc(buf_len);
 	if(!buf){
 		fprintf(stderr, "Error: Out of memory.\n");
@@ -506,6 +509,8 @@ static DBusHandlerResult dbus_filter (DBusConnection *connection, DBusMessage *m
 	char* imgPath, data;
   const	char* temp_argv = NULL;
 	std::string tmp;
+	const char* forTest = "/home/mini/OPEL/service/data/face_detected.jpg";
+
 
 	ImageProcessing* faceRecognition = new ImageProcessing();
 	faceRecognition->initialize("FaceRecognition");
@@ -513,13 +518,16 @@ static DBusHandlerResult dbus_filter (DBusConnection *connection, DBusMessage *m
 
 	if(dbus_message_is_signal(message, "org.share.linux", "publish"))
 	{
+		dbus_message_iter_init(message, &args);
 		do{
 		dbus_message_iter_get_basic(&args, &imgPath);
 		}while(dbus_message_iter_next(&args));
 		QString imgData(imgPath);
+		QString testImg(forTest);
 		// Publish logic
-		std::cout << "Image Path : " << imgData.toStdString() << std::endl;	
-		targetDataSet* matchedItem = faceRecognition->getMatchingItem(imgData);
+		std::cout << "Image Path : " << imgData.toStdString() << std::endl;
+		
+		targetDataSet* matchedItem = faceRecognition->getMatchingItem(testImg);
 		if(matchedItem == NULL)
 		{		
 			std::cout << "Its anonymous !!!" << std::endl;

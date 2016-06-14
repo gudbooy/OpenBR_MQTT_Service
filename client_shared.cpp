@@ -211,7 +211,7 @@ int client_config_load(struct mosq_config *cfg, int pub_or_sub, int argc, char *
 		cfg->topic = strdup("opel/msg");
 
 		// sending message logic
-		cfg->message = strdup("hello");
+		cfg->message = strdup(argv[0]);
 		cfg->msglen = strlen(cfg->message);
 		cfg->pub_mode = MSGMODE_CMD;
 
