@@ -1,0 +1,161 @@
+Image Path : /home/mini/OPEL/service/opel-mosquitto/client/00002_20160620124911.jpg
+Score : -inf Name : HyeminLee
+Score : -inf Name : EunsooPark
+Score : -inf Name : InjungHwang
+Score : -inf Name : ShinDongik
+Score : -inf Name : KyungJongmin
+Score : -inf Name : KyungJongmin
+Score : -inf Name : YangJinYoung
+Score : -inf Name : ChioYoungDu
+Score : -inf Name : ChioYoungDu
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Its anonymous !!!
+matchedItem String : {"Name":"anonymous","age":"anonymous","gender":"anonymous","info":"anonymous","img":"00002_20160620124911.jpg"}
+Image Path : /home/mini/OPEL/service/opel-mosquitto/client/00002_20160620125008.jpg
+Score : 0.109039 Name : HyeminLee
+Score : 0.936622 Name : EunsooPark
+Score : 0.00989538 Name : InjungHwang
+Score : 1.45619 Name : ShinDongik
+Score : -inf Name : KyungJongmin
+Score : -inf Name : KyungJongmin
+Score : -inf Name : YangJinYoung
+Score : 0.263138 Name : ChioYoungDu
+Score : 0.263138 Name : ChioYoungDu
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Name : ShinDongik
+matchedItem String : {"Name":"ShinDongik","age":"28","gender":"male","info":"Sungkyunkwan","img":"00002_20160620125008.jpg"}
+Image Path : /home/mini/OPEL/service/opel-mosquitto/client/00002_20160620125015.jpg
+Score : 0.190816 Name : HyeminLee
+Score : 0.054631 Name : EunsooPark
+Score : 1.18405 Name : InjungHwang
+Score : 0.515818 Name : ShinDongik
+Score : -inf Name : KyungJongmin
+Score : -inf Name : KyungJongmin
+Score : -inf Name : YangJinYoung
+Score : -0.12629 Name : ChioYoungDu
+Score : -0.12629 Name : ChioYoungDu
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Name : InjungHwang
+matchedItem String : {"Name":"InjungHwang","age":"24","gender":"male","info":"Sungkyunkwan","img":"00002_20160620125015.jpg"}
+Image Path : /home/mini/OPEL/service/opel-mosquitto/client/00002_20160620125025.jpg
+Score : 1.79869 Name : HyeminLee
+Score : 1.4172 Name : EunsooPark
+Score : 3.53467 Name : InjungHwang
+Score : 0.726546 Name : ShinDongik
+Score : -inf Name : KyungJongmin
+Score : -inf Name : KyungJongmin
+Score : -inf Name : YangJinYoung
+Score : -0.0217057 Name : ChioYoungDu
+Score : -0.0217057 Name : ChioYoungDu
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Name : InjungHwang
+matchedItem String : {"Name":"InjungHwang","age":"24","gender":"male","info":"Sungkyunkwan","img":"00002_20160620125025.jpg"}
+Image Path : /home/mini/OPEL/service/opel-mosquitto/client/00002_20160620125038.jpg
+Score : 1.95683 Name : HyeminLee
+Score : 1.33853 Name : EunsooPark
+Score : 3.05731 Name : InjungHwang
+Score : 0.471212 Name : ShinDongik
+Score : -inf Name : KyungJongmin
+Score : -inf Name : KyungJongmin
+Score : -inf Name : YangJinYoung
+Score : -0.0496129 Name : ChioYoungDu
+Score : -0.0496129 Name : ChioYoungDu
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Name : InjungHwang
+matchedItem String : {"Name":"InjungHwang","age":"24","gender":"male","info":"Sungkyunkwan","img":"00002_20160620125038.jpg"}
+Image Path : /home/mini/OPEL/service/opel-mosquitto/client/00002_20160620125045.jpg
+Score : 2.47324 Name : HyeminLee
+Score : 0.674118 Name : EunsooPark
+Score : 1.94499 Name : InjungHwang
+Score : 0.665236 Name : ShinDongik
+Score : -inf Name : KyungJongmin
+Score : -inf Name : KyungJongmin
+Score : -inf Name : YangJinYoung
+Score : -0.243488 Name : ChioYoungDu
+Score : -0.243488 Name : ChioYoungDu
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Name : HyeminLee
+matchedItem String : {"Name":"HyeminLee","age":"29","gender":"male","info":"Sungkyunkwan","img":"00002_20160620125045.jpg"}
+Image Path : /home/mini/OPEL/service/opel-mosquitto/client/00002_20160620125101.jpg
+Score : 0.442595 Name : HyeminLee
+Score : 0.855871 Name : EunsooPark
+Score : 0.0223791 Name : InjungHwang
+Score : 1.17711 Name : ShinDongik
+Score : -inf Name : KyungJongmin
+Score : -inf Name : KyungJongmin
+Score : -inf Name : YangJinYoung
+Score : -0.0616628 Name : ChioYoungDu
+Score : -0.0616628 Name : ChioYoungDu
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Score : 0 Name : 
+Name : ShinDongik
+matchedItem String : {"Name":"ShinDongik","age":"28","gender":"male","info":"Sungkyunkwan","img":"00002_20160620125101.jpg"}

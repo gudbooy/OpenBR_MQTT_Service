@@ -1,1 +1,17 @@
-HyeminLee /home/mini/OPEL/service/data/preDataSet/HyeminLee.jpg 29 male Sungkyunkwan 
+HyeminLee /home/mini/OPEL/service/data/preDataSet/HyeminLee.jpg 29 male Sungkyunkwan gudbooy@gmail.com
+EunsooPark /home/mini/OPEL/service/data/preDataSet/pes.jpg 29 male Sungkyunkwan pes9488@gmail.com
+InjungHwang /home/mini/OPEL/service/data/preDataSet/injung.jpg 24 male Sungkyunkwan sinban04@gmail.com
+ShinDongik /home/mini/OPEL/service/data/preDataSet/sdi.jpg 28 male Sungkyunkwan d01046028383@gmail.com
+KyungJongmin /home/mini/OPEL/service/data/preDataSet/kjm.jpg 50 male CISS-Leader(Kaist) kyung@kaist.ac.kr
+KyungJongmin /home/mini/OPEL/service/data/preDataSet/kjm2.jpg 50 male CISS-Leader(Kaist) kyung@kaist.ac.kr
+YangJinYoung /home/mini/OPEL/service/data/preDataSet/yjy.jpg 40 male CISS-ProjectDirector(Kaist) jyyang0308@kaist.ac.kr 
+ChioYoungDu /home/mini/OPEL/service/data/preDataSet/cyd.jpg 40 male CISS-ProjectDirector(Kaist) ydchoi@kaist.ac.kr
+KimHyunho /home/mini/OPEL/service/data/preDataSet/khh.jpg 35 male CISS-ProjectDirector(Kais) kimmrl1022@kaist.ac.kr
+JooChanghee /home/mini/OPEL/service/data/preDataSet/jch.jpg 40 male CISS-ProjectDirector(Unist) cjoo@unist.ac.kr
+DongkunShin /home/mini/OPEL/service/data/preDataSet/sdk.jpg 46 male CISS-ProjectDirector(Sungkyunkwan-Univ.) dongkun@skku.edu
+BackYunju /home/mini/OPEL/service/data/preDataSet/byj.jpg 40 male CISS-ProjectDirector(Pusan-Univ.) yunju@pusan.ac.kr
+YeeKang /home/mini/OPEL/service/data/preDataSet/yk.jpg 40 male CISS-ProjectDirector(Handong-Univ.) yk@handong.edu
+ChoiJongmu /home/mini/OPEL/service/data/preDataSet/cjm.bmp 40 male CISS-ProjectDirector(Dangkuk-Univ.) choijm@dankook.ac.kr
+HaDongsam /home/mini/OPEL/service/data/preDataSet/hds.jpg 45 male CISS-ProjectDirector(Virginia-Tech-Univ.) ha@vt.edu
+JungKyunghun /home/mini/OPEL/service/data/preDataSet/jkh.jpg 40 male CISS-ProjectDirector(Kookmin-Univ.) khjung@kookmin.ac.kr
+

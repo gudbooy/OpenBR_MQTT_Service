@@ -68,7 +68,7 @@ pthread_t thread;
 
 void my_connect_callback(struct mosquitto *mosq, void *obj, int result)
 {
-	printf("connect callback!\n");
+//	printf("connect callback!\n");
 	int rc = MOSQ_ERR_SUCCESS;
 
 	if(!result){
@@ -118,7 +118,7 @@ void my_disconnect_callback(struct mosquitto *mosq, void *obj, int rc)
 {
 	connected = false;
 	disconnect_sent = false;
-	printf("disconnect callback!\n");
+//	printf("disconnect callback!\n");
 }
 
 void my_publish_callback(struct mosquitto *mosq, void *obj, int mid)
@@ -133,13 +133,13 @@ void my_publish_callback(struct mosquitto *mosq, void *obj, int mid)
 		mosquitto_disconnect(mosq);
 		disconnect_sent = true;
 //		connected = false;
-		printf("disconnect!\n");
+//		printf("disconnect!\n");
 	}
 }
 
 void my_log_callback(struct mosquitto *mosq, void *obj, int level, const char *str)
 {
-	printf("%s\n", str);
+//	printf("%s\n", str);
 }
 
 int load_stdin(void)
@@ -472,11 +472,11 @@ void *publish(void* arg)
 			rc = MOSQ_ERR_SUCCESS;
 		}else{
 			rc = mosquitto_loop(mosq, -1, 1);
-			printf("aa\n");
+	//		printf("aa\n");
 		}
 	}while(rc == MOSQ_ERR_SUCCESS && connected);
 	
-	printf("bb\n");
+//	printf("bb\n");
 //	connected = true;
 
 	if(mode == MSGMODE_STDIN_LINE){
@@ -507,11 +507,13 @@ static DBusHandlerResult dbus_filter (DBusConnection *connection, DBusMessage *m
 	DBusMessageIter args;
 	
 	char* imgPath, data;
-  const	char* temp_argv = NULL;
+	const	char* temp_argv = NULL;
 	std::string tmp;
-	const char* forTest = "/home/mini/OPEL/service/data/face_detected.jpg";
-
-
+	const char* forTest = "/home/mini/OPEL/service/00002_20160618051248.jpg";
+	char *fileID;
+	
+	fileID = (char*) malloc(sizeof(char) * 25);
+	fileID[24] = '\0';
 	ImageProcessing* faceRecognition = new ImageProcessing();
 	faceRecognition->initialize("FaceRecognition");
 	faceRecognition->parseJsonData();
@@ -523,37 +525,60 @@ static DBusHandlerResult dbus_filter (DBusConnection *connection, DBusMessage *m
 		dbus_message_iter_get_basic(&args, &imgPath);
 		}while(dbus_message_iter_next(&args));
 		QString imgData(imgPath);
+		strncpy(fileID, imgPath+46, 24);
+		fprintf(stderr, "fileID : %s\n", fileID); 
+		std::string appId(fileID);
 		QString testImg(forTest);
+//		imgData = forTest;
 		// Publish logic
 		std::cout << "Image Path : " << imgData.toStdString() << std::endl;
-		
-		targetDataSet* matchedItem = faceRecognition->getMatchingItem(testImg);
+			
+		targetDataSet* matchedItem = faceRecognition->getMatchingItem(imgData);
 		if(matchedItem == NULL)
-		{		
-			std::cout << "Its anonymous !!!" << std::endl;
-			temp_argv= anonymous;			
+		{
+			std::ostringstream age;
+			age << faceRecognition->ageEstimation(imgData);
+			std::cout << "Its anonymous !!!" << std::endl;	
+			tmp += "{\"Name\":\"";
+			tmp += "anonymous";
+			tmp += "\",\"age\":\"";
+			tmp += age.str();
+			tmp += "\",\"gender\":\"";
+			tmp += faceRecognition->genderEstimation(imgData).toStdString();
+			tmp += "\",\"info\":\"";	
+			tmp += "anonymous";
+			tmp += "\",\"img\":\"";
+			tmp += appId;
+			tmp += "\"}";
+			temp_argv = tmp.c_str();	
+			std::cout << "matchedItem String : " << temp_argv << std::endl;
 			/*anonymous*/
 		}
 		else
 		{
 			std::cout << "Name : " << matchedItem->name.toStdString() << std::endl;
+			tmp += "{\"Name\":\"";
 			tmp += matchedItem->name.toStdString();
-			tmp += " ";
+			tmp += "\",\"age\":\"";
 			tmp += matchedItem->age.toStdString();
-			tmp += " ";
+			tmp += "\",\"gender\":\"";
+			tmp += matchedItem->gender.toStdString();
+			tmp += "\",\"info\":\"";
 			tmp += matchedItem->personalInfo.toStdString();
+			tmp += "\",\"img\":\"";
+			tmp += appId;
+			tmp += "\"}";
 			temp_argv = tmp.c_str();	
 			std::cout << "matchedItem String : " << temp_argv << std::endl;
 			/*make data set*/
 		}
 		
-		printf("received well!\n");
+//		printf("received well!\n");
 
-	
+		delete faceRecognition;
 		pthread_create(&thread, NULL, &publish, (void*)temp_argv);			
 		pthread_join(thread, NULL);
 		
-		delete faceRecognition;
 		
 		
 		
