@@ -1,0 +1,109 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CLIENT_PUB	client_shared.h	30;"	d
+CLIENT_SUB	client_shared.h	31;"	d
+MSGMODE_CMD	client_shared.h	24;"	d
+MSGMODE_FILE	client_shared.h	27;"	d
+MSGMODE_NONE	client_shared.h	23;"	d
+MSGMODE_NULL	client_shared.h	28;"	d
+MSGMODE_STDIN_FILE	client_shared.h	26;"	d
+MSGMODE_STDIN_LINE	client_shared.h	25;"	d
+STATUS_CONNACK_RECVD	pub_client.c	35;"	d	file:
+STATUS_CONNECTING	pub_client.c	34;"	d	file:
+STATUS_WAITING	pub_client.c	36;"	d	file:
+_CLIENT_CONFIG_H	client_shared.h	18;"	d
+bind_address	client_shared.h	/^	char *bind_address;$/;"	m	struct:mosq_config
+cafile	client_shared.h	/^	char *cafile;$/;"	m	struct:mosq_config
+capath	client_shared.h	/^	char *capath;$/;"	m	struct:mosq_config
+certfile	client_shared.h	/^	char *certfile;$/;"	m	struct:mosq_config
+ciphers	client_shared.h	/^	char *ciphers;$/;"	m	struct:mosq_config
+clean_session	client_shared.h	/^	bool clean_session; \/* sub *\/$/;"	m	struct:mosq_config
+client_config_cleanup	client_shared.c	/^void client_config_cleanup(struct mosq_config *cfg)$/;"	f
+client_config_line_proc	client_shared.c	/^int client_config_line_proc(struct mosq_config *cfg, int pub_or_sub, int argc, char *argv[])$/;"	f
+client_config_load	client_shared.c	/^int client_config_load(struct mosq_config *cfg, int pub_or_sub, int argc, char *argv[])$/;"	f
+client_connect	client_shared.c	/^int client_connect(struct mosquitto *mosq, struct mosq_config *cfg)$/;"	f
+client_id_generate	client_shared.c	/^int client_id_generate(struct mosq_config *cfg, const char *id_base)$/;"	f
+client_opts_set	client_shared.c	/^int client_opts_set(struct mosquitto *mosq, struct mosq_config *cfg)$/;"	f
+connected	pub_client.c	/^static bool connected = true;$/;"	v	file:
+debug	client_shared.h	/^	bool debug;$/;"	m	struct:mosq_config
+disconnect_sent	pub_client.c	/^static bool disconnect_sent = false;$/;"	v	file:
+eol	client_shared.h	/^	bool eol; \/* sub *\/$/;"	m	struct:mosq_config
+file_input	client_shared.h	/^	char *file_input; \/* pub *\/$/;"	m	struct:mosq_config
+filter_out_count	client_shared.h	/^	int filter_out_count; \/* sub *\/$/;"	m	struct:mosq_config
+filter_outs	client_shared.h	/^	char **filter_outs; \/* sub *\/$/;"	m	struct:mosq_config
+host	client_shared.h	/^	char *host;$/;"	m	struct:mosq_config
+id	client_shared.h	/^	char *id;$/;"	m	struct:mosq_config
+id_prefix	client_shared.h	/^	char *id_prefix;$/;"	m	struct:mosq_config
+init_config	client_shared.c	/^void init_config(struct mosq_config *cfg)$/;"	f
+insecure	client_shared.h	/^	bool insecure;$/;"	m	struct:mosq_config
+keepalive	client_shared.h	/^	int keepalive;$/;"	m	struct:mosq_config
+keyfile	client_shared.h	/^	char *keyfile;$/;"	m	struct:mosq_config
+last_mid	pub_client.c	/^static int last_mid = -1;$/;"	v	file:
+last_mid_sent	pub_client.c	/^static int last_mid_sent = -1;$/;"	v	file:
+load_file	pub_client.c	/^int load_file(const char *filename)$/;"	f
+load_stdin	pub_client.c	/^int load_stdin(void)$/;"	f
+main	pub_client.c	/^int main(int argc, char *argv[])$/;"	f
+main	sub_client.c	/^int main(int argc, char *argv[])$/;"	f
+max_inflight	client_shared.h	/^	unsigned int max_inflight;$/;"	m	struct:mosq_config
+message	client_shared.h	/^	char *message; \/* pub *\/$/;"	m	struct:mosq_config
+message	pub_client.c	/^static char *message = NULL;$/;"	v	file:
+mid_sent	pub_client.c	/^static int mid_sent = 0;$/;"	v	file:
+mode	pub_client.c	/^static int mode = MSGMODE_NONE;$/;"	v	file:
+mosq_config	client_shared.h	/^struct mosq_config {$/;"	s
+mosquitto__parse_socks_url	client_shared.c	/^static int mosquitto__parse_socks_url(struct mosq_config *cfg, char *url)$/;"	f	file:
+mosquitto__urldecode	client_shared.c	/^static int mosquitto__urldecode(char *str)$/;"	f	file:
+msg_count	client_shared.h	/^	int msg_count; \/* sub *\/$/;"	m	struct:mosq_config
+msg_count	sub_client.c	/^int msg_count = 0;$/;"	v
+msglen	client_shared.h	/^	long msglen; \/* pub *\/$/;"	m	struct:mosq_config
+msglen	pub_client.c	/^static long msglen = 0;$/;"	v	file:
+my_connect_callback	pub_client.c	/^void my_connect_callback(struct mosquitto *mosq, void *obj, int result)$/;"	f
+my_connect_callback	sub_client.c	/^void my_connect_callback(struct mosquitto *mosq, void *obj, int result)$/;"	f
+my_disconnect_callback	pub_client.c	/^void my_disconnect_callback(struct mosquitto *mosq, void *obj, int rc)$/;"	f
+my_log_callback	pub_client.c	/^void my_log_callback(struct mosquitto *mosq, void *obj, int level, const char *str)$/;"	f
+my_log_callback	sub_client.c	/^void my_log_callback(struct mosquitto *mosq, void *obj, int level, const char *str)$/;"	f
+my_message_callback	sub_client.c	/^void my_message_callback(struct mosquitto *mosq, void *obj, const struct mosquitto_message *message)$/;"	f
+my_publish_callback	pub_client.c	/^void my_publish_callback(struct mosquitto *mosq, void *obj, int mid)$/;"	f
+my_subscribe_callback	sub_client.c	/^void my_subscribe_callback(struct mosquitto *mosq, void *obj, int mid, int qos_count, const int *granted_qos)$/;"	f
+no_retain	client_shared.h	/^	bool no_retain; \/* sub *\/$/;"	m	struct:mosq_config
+password	client_shared.h	/^	char *password;$/;"	m	struct:mosq_config
+password	pub_client.c	/^static char *password = NULL;$/;"	v	file:
+port	client_shared.h	/^	int port;$/;"	m	struct:mosq_config
+print_usage	pub_client.c	/^void print_usage(void)$/;"	f
+print_usage	sub_client.c	/^void print_usage(void)$/;"	f
+process_messages	sub_client.c	/^bool process_messages = true;$/;"	v
+protocol_version	client_shared.h	/^	int protocol_version;$/;"	m	struct:mosq_config
+psk	client_shared.h	/^	char *psk;$/;"	m	struct:mosq_config
+psk_identity	client_shared.h	/^	char *psk_identity;$/;"	m	struct:mosq_config
+pub_mode	client_shared.h	/^	int pub_mode; \/* pub *\/$/;"	m	struct:mosq_config
+qos	client_shared.h	/^	int qos;$/;"	m	struct:mosq_config
+qos	pub_client.c	/^static int qos = 0;$/;"	v	file:
+quiet	client_shared.h	/^	bool quiet;$/;"	m	struct:mosq_config
+quiet	pub_client.c	/^static bool quiet = false;$/;"	v	file:
+retain	client_shared.h	/^	bool retain;$/;"	m	struct:mosq_config
+retain	pub_client.c	/^static int retain = 0;$/;"	v	file:
+snprintf	client_shared.c	28;"	d	file:
+snprintf	pub_client.c	28;"	d	file:
+snprintf	sub_client.c	27;"	d	file:
+socks5_host	client_shared.h	/^	char *socks5_host;$/;"	m	struct:mosq_config
+socks5_password	client_shared.h	/^	char *socks5_password;$/;"	m	struct:mosq_config
+socks5_port	client_shared.h	/^	int socks5_port;$/;"	m	struct:mosq_config
+socks5_username	client_shared.h	/^	char *socks5_username;$/;"	m	struct:mosq_config
+status	pub_client.c	/^static int status = STATUS_CONNECTING;$/;"	v	file:
+tls_version	client_shared.h	/^	char *tls_version;$/;"	m	struct:mosq_config
+topic	client_shared.h	/^	char *topic; \/* pub *\/$/;"	m	struct:mosq_config
+topic	pub_client.c	/^static char *topic = NULL;$/;"	v	file:
+topic_count	client_shared.h	/^	int topic_count; \/* sub *\/$/;"	m	struct:mosq_config
+topics	client_shared.h	/^	char **topics; \/* sub *\/$/;"	m	struct:mosq_config
+use_srv	client_shared.h	/^	bool use_srv;$/;"	m	struct:mosq_config
+username	client_shared.h	/^	char *username;$/;"	m	struct:mosq_config
+username	pub_client.c	/^static char *username = NULL;$/;"	v	file:
+verbose	client_shared.h	/^	bool verbose; \/* sub *\/$/;"	m	struct:mosq_config
+will_payload	client_shared.h	/^	char *will_payload;$/;"	m	struct:mosq_config
+will_payloadlen	client_shared.h	/^	long will_payloadlen;$/;"	m	struct:mosq_config
+will_qos	client_shared.h	/^	int will_qos;$/;"	m	struct:mosq_config
+will_retain	client_shared.h	/^	bool will_retain;$/;"	m	struct:mosq_config
+will_topic	client_shared.h	/^	char *will_topic;$/;"	m	struct:mosq_config
